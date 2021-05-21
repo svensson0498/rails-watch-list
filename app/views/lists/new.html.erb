@@ -1,5 +1,9 @@
-<h3>Create a new list</h3>
-  <%= simple_form_for @list do |f| %>
-  <%= f.input :name, placeholder: "enter list name.." %>
-  <%= f.submit class: 'btn btn-flat' %>
-  <% end %>
+<div class="container">
+  <div class="card-white">
+	<h3>Create a new list</h3>
+	<%= simple_form_for @list do |f| %>
+	  <%= f.input :name, placeholder: "enter list name.." %>
+	  <%= f.submit class: 'btn btn-flat' %>
+	<% end %>
+  </div>
+</div>
