@@ -6,9 +6,11 @@
   <% @list.bookmarks.each do |bookmark| %>
     <li><p><strong><%= bookmark.movie.title %></strong></p>
       <p><%= bookmark.comment %></p>
-      <p><%= link_to "DESTROY BOOKMARK", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" } %></p>
     </li>
   <% end %>
 </ul>
+<%= link_to list_path(@list), method: :delete, data: { confirm: 'Are you sure?'} do %>
+  <i class="fas fa-trash"></i>
+<% end %>
 <p><%= link_to "ADD BOOKMARK", new_list_bookmark_path(@list) %></p>
 <p><%= link_to "BACK TO LISTS", lists_path %></p>
